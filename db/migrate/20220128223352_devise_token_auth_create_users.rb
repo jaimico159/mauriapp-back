@@ -33,6 +33,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
       t.string :phone1
       t.string :phone2
       t.string :email
+      t.references :organization, foreign_key: true
 
       ## Tokens
       t.json :tokens
